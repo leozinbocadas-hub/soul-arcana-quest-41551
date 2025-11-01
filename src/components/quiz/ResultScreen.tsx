@@ -167,11 +167,13 @@ export const ResultScreen = ({ profile, onRestart }: ResultScreenProps) => {
 
         {/* Price */}
         <div className="bg-background/80 rounded-xl md:rounded-2xl p-6 md:p-8 mb-6 md:mb-8">
-          <div className="inline-flex items-center gap-2 bg-destructive/20 border border-destructive/30 rounded-full px-3 py-1.5 md:px-4 md:py-2 mb-4 md:mb-6 mx-auto">
-            <Zap className="w-4 h-4 text-destructive" />
-            <span className="text-xs md:text-sm font-semibold text-destructive break-words">
-              🔥 62% DE DESCONTO
-            </span>
+          <div className="flex justify-center mb-4 md:mb-6">
+            <div className="inline-flex items-center gap-2 bg-destructive/20 border border-destructive/30 rounded-full px-3 py-1.5 md:px-4 md:py-2">
+              <Zap className="w-4 h-4 text-destructive" />
+              <span className="text-xs md:text-sm font-semibold text-destructive break-words">
+                🔥 62% DE DESCONTO
+              </span>
+            </div>
           </div>
 
           <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
@@ -195,22 +197,28 @@ export const ResultScreen = ({ profile, onRestart }: ResultScreenProps) => {
             </p>
           </div>
 
-          <p className="text-xs md:text-sm text-muted-foreground mb-4 md:mb-6 text-center break-words leading-relaxed">
+          <p className="text-xs md:text-sm text-muted-foreground mb-6 md:mb-8 text-center break-words leading-relaxed">
             ⚡ Últimas vagas com desconto — Oferta por tempo limitado
-          </p>
-          <p className="text-xs md:text-sm text-muted-foreground mb-4 md:mb-6 text-center break-words leading-relaxed">
-            💳 <strong>Garantia de 7 dias</strong> — Se não gostar, devolvemos 100% do
-            seu dinheiro sem perguntas
           </p>
 
           <Button
             variant="mystic-hero"
             size="xl"
             onClick={handleCheckout}
-            className="w-full mb-3 md:mb-4 text-base md:text-lg animate-pulse-mystic"
+            className="w-full mb-4 md:mb-6 text-base md:text-lg animate-pulse-mystic"
           >
-            QUERO ACESSAR A BIBLIOTECA MÍSTICA AGORA 🔮
+            💜 Quero acessar agora
           </Button>
+
+          {/* Card de Garantia - DESTAQUE */}
+          <div className="relative mb-4 md:mb-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg blur-md animate-pulse-mystic" />
+            <div className="relative bg-gradient-to-r from-primary/10 to-secondary/10 border-2 border-primary/40 rounded-lg p-4 md:p-5 text-center">
+              <p className="text-sm md:text-base font-semibold text-foreground break-words leading-relaxed">
+                💳 <span className="text-primary">Garantia de 7 dias</span> — Se não gostar, devolvemos 100% do seu dinheiro sem perguntas
+              </p>
+            </div>
+          </div>
 
           <p className="text-xs text-muted-foreground text-center break-words leading-relaxed">
             🔒 Seus dados estão seguros | 💳 Pagamento processado por Cakto
@@ -268,7 +276,7 @@ export const ResultScreen = ({ profile, onRestart }: ResultScreenProps) => {
           onClick={handleCheckout}
           className="w-full md:w-auto min-w-[280px] md:min-w-[320px] text-base md:text-lg"
         >
-          QUERO ACESSAR A BIBLIOTECA MÍSTICA AGORA 🔮
+          💜 Quero acessar agora
         </Button>
 
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
