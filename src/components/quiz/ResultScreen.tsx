@@ -207,7 +207,7 @@ export const ResultScreen = ({ profile, onRestart }: ResultScreenProps) => {
             onClick={handleCheckout}
             className="w-full mb-4 md:mb-6 text-base md:text-lg animate-pulse-mystic"
           >
-            Quero acessar agora
+            Acessar agora
           </Button>
 
           {/* Card de Garantia - DESTAQUE */}
@@ -276,7 +276,7 @@ export const ResultScreen = ({ profile, onRestart }: ResultScreenProps) => {
           onClick={handleCheckout}
           className="w-full md:w-auto min-w-[280px] md:min-w-[320px] text-base md:text-lg"
         >
-          Quero acessar agora
+          Acessar agora
         </Button>
 
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
